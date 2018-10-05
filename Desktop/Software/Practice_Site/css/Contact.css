@@ -1,0 +1,241 @@
+body{
+    background-size: 100% 1000px;
+    background: linear-gradient(to right, #184350c0, #309ab4c0);
+
+}
+#topmenu ul{
+    position: absolute;
+    width:100%;
+    margin:auto;
+    left:0;
+    right:0;
+    display: table;
+    table-layout: fixed;
+    color:white;
+    font-size:1.5vw;
+    text-align: center;
+    line-height:3vw;
+
+
+} 
+
+#menu li{
+    font-weight:bold;
+    width: 20%;
+    text-align: center;
+    list-style-type: none;
+    display: inline-block;
+    table-layout:fixed;
+    background-color:none;
+    padding: 10px 20px 10px 20px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    
+    -webkit-transition: color 0.2s linear;
+	-moz-transition: color 0.2s linear;
+	transition: color 0.2s linear;
+    
+}
+
+#menu li a, #menu li a:visited{
+    text-decoration: none;
+    color:white;
+    
+}
+
+/*MENU ANIMATION */
+
+#menu li::before, #menu li::after{
+    display:inline-block;
+    opacity:0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+#menu li::before{
+    margin-right:10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+    }
+
+#menu li::after{
+    margin-left:10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+    }
+#menu li:hover::before,#menu li:hover::after,#menu li:focus::before,#menu li:focus::after {
+    opacity:1;
+    -webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+    transform: translateX(0px);
+    color: rgb(209, 218, 92);
+}
+#menu li:hover{
+    color: rgb(209, 218, 92);
+}
+
+#menu li:visited, #menu link{
+    text-decoration: none;
+    color:white;
+}
+
+#main-block{
+    background:rgb(216, 215, 215);
+    width: 100%;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+    height:50%;
+}
+
+.right-half{
+    position:absolute;
+    left:50%;
+    right:10%;
+    top:20%;
+    height:600px;
+    float:right;
+    /* width:35%; */
+    background:whitesmoke;
+    text-align: center;
+    border: solid black;
+
+}
+
+.contact-form{
+    position:relative;
+    width:90%;
+    top:25%;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto
+}
+
+#title-contact{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin:auto;
+    position:relative;
+    top:100px;
+    font-size: 3em;
+}
+
+ .contact-form input[type=text], input[type=email]{
+    /* padding:0 20px; */
+    padding-block-start: 0 20px;
+    color:black;
+    
+}
+.contact-form textarea{
+    color:black;
+}
+
+
+.contact-form input :focus{
+    border:solid red;
+}
+
+.info {
+    border:none;
+    max-width:600px;
+    width:100%;
+    background:rgb(228, 228, 228);
+    display:block;
+    border-radius: 1px;
+    line-height:35px;
+    margin:0;
+    color:white;
+    margin-bottom:10px;
+    padding:0;
+    font-size: large;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#message{
+    height:110px;;    
+}
+
+#submit{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size:larger;
+    background:rgb(184, 49, 49);
+    border-radius:5px;
+    color:white;
+    height:50px;
+    width:100%;
+    border:none;
+}
+
+.left-half{
+    position:absolute;
+    float:left;
+    margin:30px;
+    margin-left:85px;
+    line-height: 50px;
+    font-weight: 600;
+    height:250px;
+    top:200px;
+    left:5%;
+    right:50%;
+}
+.contact{
+    color:black;
+    padding:15px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size:x-large;
+    cursor:pointer;
+}
+
+.contact-clipart{
+    /* padding:0 20px 0 0; */
+    border: solid black;
+    border-radius: 50%;
+    -webkit-animation: pulsing 2.7s infinite ;
+    animation: pulsing 2.7s infinite;
+}
+
+@keyframes pulsing{
+    0% {width:80px;}
+    50% {width:95px;height:95px;}
+    100%{width:80px;}
+}
+
+@-webkit-keyframes pulsing{
+    0% {width:80px;}
+    50% {width:95px;height:95px;}
+    100%{width:80px;}
+}
+
+h2{
+    opacity:0;
+    font-size:1.5em;
+    padding-left:125px;
+}
+
+.toggler{
+    position:absolute;
+    width:80px;
+    height:80px;
+    z-index: 2;
+    cursor:pointer;
+    display:block;
+    opacity:0;
+}
+
+.toggler:checked ~ h2{
+    opacity:1;
+}
+
+.toggler:checked ~ img{
+    -webkit-transform: rotate(0deg) translateX(-290px);
+    transform: rotate(0deg) translateX(-290px);
+}
+
+

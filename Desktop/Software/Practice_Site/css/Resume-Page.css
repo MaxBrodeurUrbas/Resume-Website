@@ -1,0 +1,302 @@
+body{
+    /* background: linear-gradient(to right, #ffa600d8, #4c00ffd2); */
+    background: linear-gradient(to right, #184350c0, #309ab4c0);
+
+    background-color: rgb(255, 255, 255);
+    margin:0;
+    padding:0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right:0px;
+    margin-left:0px;
+    background-size: 100% 1000px;
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%; 
+   
+}
+.header{
+    color:white;
+    position:absolute;
+    margin:auto;
+    top:20%;    
+    left:10%; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 6vw;
+    font-weight: bold;
+    overflow:hidden;   
+}
+
+#short-summary{
+    font-size: 2vw;
+    width:80%;
+}
+
+.scroll-down-div{
+    position:absolute;
+    top:30%;
+    left:90%;
+    line-height: 1.5em;
+    margin:auto;
+    text-align:center;
+    color:white;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:bold;
+}
+
+#down-arrow{
+    position:relative;
+    -webkit-animation: bouncing-arrow 1.5s infinite ;
+    animation: bouncing-arrow 1.5s infinite;
+}
+
+/* bouncing arrow animation */
+
+@keyframes bouncing-arrow{
+    0% {bottom: 0px;}
+    50% {bottom: 20px;}
+    100%{bottom: 0px;}
+}
+
+@-webkit-keyframes bouncing-arrow{
+    0% {bottom: 0px;}
+    50% {bottom: 20px;}
+    100%{bottom: 0px;}
+}
+
+/* Menu animation*/
+
+#topmenu ul{
+    position: absolute;
+    width:100%;
+    margin:auto;
+    left:0;
+    right:0;
+    display: table;
+    table-layout: fixed;
+    color:white;
+    font-size:1.5vw;
+    text-align: center;
+    line-height:3vw;
+
+
+} 
+
+#menu li{
+    font-weight:bold;
+    width: 20%;
+    text-align: center;
+    list-style-type: none;
+    display: inline-block;
+    table-layout:fixed;
+    background-color:none;
+    padding: 10px 20px 10px 20px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    
+    -webkit-transition: color 0.2s linear;
+	-moz-transition: color 0.2s linear;
+	transition: color 0.2s linear;
+    
+}
+
+#menu li a, #menu li a:visited{
+    text-decoration: none;
+    color:white;
+    
+}
+
+/*MENU ANIMATION */
+
+#menu li::before, #menu li::after{
+    display:inline-block;
+    opacity:0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+#menu li::before{
+    margin-right:10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+    }
+
+#menu li::after{
+    margin-left:10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+    }
+#menu li:hover::before,#menu li:hover::after,#menu li:focus::before,#menu li:focus::after {
+    opacity:1;
+    -webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+    transform: translateX(0px);
+    color: rgb(209, 218, 92);
+}
+#menu li:hover{
+    color: rgb(209, 218, 92);
+}
+
+#menu li:visited, #menu link{
+    text-decoration: none;
+    color:white;
+}
+
+.content-block{
+    position:relative;
+    width:100;
+    right:0;
+    left:0;
+    margin:auto;
+    padding:30px;
+}
+
+#block1{
+    background:white;
+    border:solid black 2px;
+    opacity:0.8;
+    top:450px;
+}
+
+.section-header{
+    color:rgb(0, 0, 0);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size:4vw;
+    position:relative;
+    left:7%;
+    font-weight:bold;
+    margin: 20px 20px 40px 20px;
+}
+
+
+.inner-block{
+    border:solid black 2px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    right:0;
+    left:0;
+    margin:auto;
+    width:80%;
+    opacity:1;
+    padding: 10px 20px 10px 20px;
+    line-height:0.5em;    
+    
+}
+
+.half-inner-block{
+    border:solid black 2px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    opacity:1;
+    padding: 10px 20px 10px 20px;
+    line-height:2.5vw; 
+    width: 30%;
+    margin:3vw;
+    /* left:5%; */
+    background:rgb(226,226,226);
+
+}
+
+.left{
+    position:absolute;
+    left:10%;
+}
+
+.right{
+    position:absolute;
+    right:10%;
+}
+
+.top{
+    top:10%;
+}
+
+.bottom{
+    bottom:10%;
+}
+
+
+.title{
+    font-size:3vw;
+    font-weight:bold;
+}
+
+.description{
+    font-size:1.5vw;
+    line-height:2vw;
+}
+
+#block2{
+    position:relative;
+    top:450px;
+    background:rgb(226, 226, 226);
+    opacity:0.8;
+}
+
+.education-image{
+    padding:2% 4% 2% 2%;
+}
+
+.year{
+    font-size: 1.5vw;
+    padding:0 0 0 1%;
+}
+
+#block3{
+    background:white;
+    border:solid black 2px;
+    opacity:0.8;
+    top:450px;
+    height:70vw;
+    perspective: 1000;
+    -webkit-perspective: 1000;
+    
+}
+
+#block4{
+    background:rgb(226, 226, 226);
+    border:solid black 2px;
+    opacity:0.8;
+    top:450px;
+    height:25em;
+    perspective: 1000;
+    -webkit-perspective: 1000;
+}
+
+.half-page-card{
+    width:30%;
+    position:relative;
+    height: 15em;
+    /* margin:0 0 0 ; */
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    line-height: 3em;
+    font-weight: bold;
+    text-align: center;
+    font-size:1.2vw;
+}
+
+
+.half-page-card div{
+    width:100%;
+    position:absolute;
+    height: 20em;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+#left{
+    margin: 0 0 10% 10%;
+}
+
+#right{
+    margin:0 10% 10% 0;
+}
+
+
